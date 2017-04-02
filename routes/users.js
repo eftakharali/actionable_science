@@ -67,4 +67,18 @@ router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res
       res.json({user: req.user})
 })
 
+router.get('/auth/facebook', passport.authenticate('facebook'))
+
+router.get('/auth/facebook/callback', passport.authenticate('twitter',{failureRedirect:'/'}), (req, res) =>{
+      console.log(res)
+      res.redirect('/')
+})
+
+router.get('/auth/twitter', passport.authenticate('twitter'))
+
+router.get('/auth/twitter/callback', passport.authenticate('twitter',{failureRedirect:'/'}), (req, res) =>{
+      console.log(res)
+      res.redirect('/')
+})
+
 module.exports = router

@@ -23,17 +23,38 @@ export class AuthService {
     const headers = new Headers();
     headers.append('Content-Type','application/json');
 
-    return this.http.post('http://localhost:1000/users/authenticate', user, {headers:headers})
+    return this.http.post('/users/authenticate', user, {headers: headers})
       .map(res => res.json())
 
   }
+
+
+  authenticateFBUser() {
+    console.log('service fb')
+    const headers = new Headers()
+    headers.append('Access-Control-Allow-Origin','*')
+    headers.append('Content-Type','application/json')
+    return this.http.get('/users/auth/facebook',{headers: headers}).map(res => {
+      console.log('service', res)
+      return res.json()
+    })
+  }
+
+  authenticateTwitterUser() {
+    console.log('service twitter')
+    return this.http.get('/users/auth/twitter').map(res => {
+      console.log('service', res)
+      return res.json()
+    })
+  }
+
   getProfile() {
     const headers = new Headers();
     this.loadToken()
     headers.append('Authorization', this.authToken)
     headers.append('Content-Type','application/json');
 
-    return this.http.get('http://localhost:1000/users/profile', {headers:headers})
+    return this.http.get('/users/profile', {headers: headers})
       .map(res => res.json())
 
   }

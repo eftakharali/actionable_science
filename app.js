@@ -1,8 +1,8 @@
-const express = require('express'),
-      path    = require('path'),
+const express     = require('express'),
+      path        = require('path'),
       bodyParser  = require('body-parser'),
       cors        = require('cors'),
-      mongoose   = require('mongoose'),
+      mongoose    = require('mongoose'),
       passport    = require('passport')
 
 const config = require('./config/db') 
@@ -28,7 +28,7 @@ const users = require('./routes/users')
 app.use(cors())
 // body parser Middleware
 
-//app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.json())
 
 //passprt Middleware

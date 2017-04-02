@@ -16,6 +16,8 @@
     "express": "^4.15.2",
     "mongoose": "^4.9.1",
     "passport": "^0.3.2",
-    "passport-jwt": "^2.2.1"
+    "passport-facebook": "^2.1.1",
+    "passport-jwt": "^2.2.1",
+    "passport-twitter": "^1.0.4"
   }
 }

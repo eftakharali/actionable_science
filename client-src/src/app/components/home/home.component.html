@@ -1,24 +1,10 @@
 <div class="jumbotron text-center">
-  <h1> MEAN Authentication App</h1>
-  <p class="lead">Welcome to our custom MEAN authentication application bult from scartch</p>
+  <h1> Actionable Science App</h1>
+  <p class="lead">Welcome to our custom application built for login testing</p>
   <div>
     <a class="btn btn-primary" [routerLink]="['/register']">Register</a>
     <a class="btn btn-default" [routerLink]="['/login']">Login</a>
+    <a class="btn btn-default" (click)="fbLogin()">Facebook Login</a>
+    <a class="btn btn-default" (click)="twitterLogin()" > Twitter Login</a>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-4">
-    <h3>Express App</h3>
-    <p> Express backend</p>
-  </div>
-  <div class="col-md-4">
-      <h3>Authentication</h3>
-      <p> Authenticate</p>
-    </div>
-
-  <div class="col-md-4">
-    <h3>Angular 2</h3>
-    <p> Angular2</p>
-  </div>
-
 </div>
