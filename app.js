@@ -7,7 +7,7 @@ const express     = require('express'),
 
 const config = require('./config/db') 
 
-const port = 1000
+const port = 8080
 
 //connect to database
 mongoose.connect(config.database)
