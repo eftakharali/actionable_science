@@ -4,7 +4,7 @@ Clone the application Steps to perform
 Clone the application
 1) Go to actionable_science and do npm install
 2) To run it do node app
-3) Login from http:localhost:1000
+3) Login from http:localhost:8080
 
 
 To make changes in client side
